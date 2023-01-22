@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Poppins', sans-serif;
 }
 
 .main-logo {
-    width: 25%;
+    max-width: 750px;
+    width: 80vw;
     display: block;
     margin-top: 100px;
     margin-left: auto;
@@ -13,10 +16,13 @@ body {
 
 audio {
     display: block;
+    width: 30vw;
     margin-right: auto;
     margin-left: auto;
 }
 
 p {
     text-align: center;
+    margin-left: 60px;
+    margin-right: 60px;
 }
