@@ -15,20 +15,27 @@ body {
         margin-left: auto;
         margin-right: auto;
     }
-    audio {
+    #playstop {
         display: block;
-        width: 40vw;
         margin-right: auto;
         margin-left: auto;
     }
 }
 
 @media (min-width: 640px) {
-    audio {
+    #playstop {
         display: block;
-        width: 40vw;
         margin-right: auto;
+        margin-left: auto
+    }
+    .playbutton {
+        padding: auto;
         margin-left: auto;
+        margin-right: auto;
+    }
+    .container_audio {
+        margin-top: 25px;
+        margin-bottom: 25px;
     }
     .main-logo {
         max-width: 750px;

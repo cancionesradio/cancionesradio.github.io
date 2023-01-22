@@ -11,12 +11,16 @@
     </head>
     <body>
         <img class="main-logo" src="images/dzcp.png">
-        <p><audio controls autoplay>
-            <source src="https://eu8.fastcast4u.com/proxy/stephenl13?mp=/1">
-            Your browser does not support audio playback.
-        </audio></p>
+        <div class="container_audio">
+            <audio id="mainaudio">
+                <source type="audio/mp3" src="https://eu8.fastcast4u.com/proxy/stephenl13?mp=/1">
+            </audio>
+            <a href="#"><img id="playstop" src="images/play.png"></a>
+        </div>
         <p>This page is under development for designing. Meanwhile, you can still listen to the established 24/7 stream.<br/>If the website has reached listener capacity, you can still check out our Voice Channels category.</p>
         <p>All songs used in this online broadcast are properties of its respective channels, composers, and labels.</p>
         <p>©️ Canciones de Filipinas. All rights reserved.</p>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="scripts/radioplay.js"></script>
     </body>
 </html>
