@@ -3,6 +3,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
 }
 
 @media (max-width: 640px) {
