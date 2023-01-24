@@ -5,8 +5,6 @@ var loadingIcon = document.querySelector('.loading-icon');
 let slowInternetTimeout = null;
 audio.volume = 1
 
-window.
-
 audio.addEventListener('waiting', () => {
 slowInternetTimeout = setTimeout(() => {
     //show buffering
@@ -30,13 +28,7 @@ function playstop() {
     if(audio.paused) {
         audio.load()
         audio.play().catch(() => {
-            if(audio.error.code == 4) {
-                loadingIcon.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> The station is off-air. Come back later when available.'
-            } else if(audio.error.code == 3) {
-                loadingIcon.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> An encoding error has occured. Please try again.'
-            } else if(audio.error.code == 2) {
-                loadingIcon.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> A network error has occured. Please try again.'
-            } 
+            loadingIcon.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> An error has occured. Please try again.'
             playstopBtn.src = 'images/play.png';
         });
         playstopBtn.src = 'images/stop.png';
