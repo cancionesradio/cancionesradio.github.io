@@ -6,28 +6,28 @@ body {
     background-color: #ffffff;
 }
 
+.container_audio {
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.volume-control { 
+    margin-left: 25px;
+    margin-top: 35px;
+}
+
 @media (max-width: 640px) {
     .main-logo {
         max-width: 750px;
         width: 70vw;
-        display: block;
+        display: flex;
         margin-top: 100px;
         margin-left: auto;
         margin-right: auto;
-    }
-    #playstop {
-        display: block;
-        margin-right: auto;
-        margin-left: auto
-    }
-    .playbutton {
-        padding: auto;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .container_audio {
-        margin-top: 25px;
-        margin-bottom: 25px;
     }
     h1 {
         font-size: 40px;
@@ -39,20 +39,6 @@ body {
 }
 
 @media (min-width: 640px) {
-    #playstop {
-        display: block;
-        margin-right: auto;
-        margin-left: auto
-    }
-    .playbutton {
-        padding: auto;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .container_audio {
-        margin-top: 25px;
-        margin-bottom: 25px;
-    }
     .main-logo {
         max-width: 750px;
         width: 50vw;

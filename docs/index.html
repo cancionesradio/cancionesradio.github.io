@@ -16,7 +16,8 @@
             <audio id="mainaudio">
                 <source type="audio/mp3" src="https://eu8.fastcast4u.com/proxy/stephenl13?mp=/1">
             </audio>
-            <a href="javascript:playstop()"><img id="playstop" src="images/play.png"></a>
+            <div class="playstop"><a href="javascript:playstop()"><img id="playstop" src="images/play.png"></a></div>
+            <div class="volume-control"><input id="volume-control" type="range" max="100" value="100" onchange="setVolume()"></div>
         </div>
         <p>Certain features are still in development. If the website has reached listener capacity,<br>you can still check out our Voice Channels category by <a href="https://discord.gg/xe5TUDgGbe" target="_blank">visiting our Discord server</a>.<br>All songs used in this online broadcast are properties of its respective channels, composers, and labels.</p>
         <p class="footer">©️ Canciones de Filipinas. All rights reserved.</p>
