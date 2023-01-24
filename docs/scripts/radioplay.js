@@ -1,7 +1,7 @@
 var audio = document.querySelector('#mainaudio');
 var playstopBtn = document.querySelector('#playstop');
 
-playstopBtn.addEventListener('click', function() {
+function playstop() {
     if(audio.paused) {
         audio.load()
         audio.play();
@@ -10,4 +10,4 @@ playstopBtn.addEventListener('click', function() {
         audio.pause();
         playstopBtn.src = 'images/play.png';
     }
-})
+}
