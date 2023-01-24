@@ -25,6 +25,12 @@ body {
     font-size: 30px;
 }
 
+.loading-icon {
+    display: block;
+    margin: auto;
+    font-size: 25px;
+}
+
 .fa-brands {
     padding: 10px;
 }
@@ -44,6 +50,12 @@ body {
 .volume-control { 
     margin-left: 25px;
     margin-top: 35px;
+}
+
+@media (max-width: 590px) {
+    .loading-icon {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 640px) {
