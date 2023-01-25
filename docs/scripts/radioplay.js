@@ -23,12 +23,19 @@ audio.addEventListener('ended', () => {
     loadingIcon.innerHTML = '<i class="fa-solid fa-spinner fa-triangle-exclamation"></i> DZCP is now signing off. Thank you for listening.'
     playstopBtn.src = 'images/play.png';
 });
+audio.addEventListener('error', () => {
+    if(audio.error.code === 4) {
+        loadingIcon.innerHTML = '<i class="fa-solid fa-spinner fa-triangle-exclamation"></i> The station is offline. Come back later.'
+    } else {
+        loadingIcon.innerHTML = '<i class="fa-solid fa-spinner fa-triangle-exclamation"></i> An error has occured.'
+    }
+})
 
 function playstop() {
     if(audio.paused) {
         audio.load()
         audio.play().catch(() => {
-            loadingIcon.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> An error has occured. Please try again.'
+            loadingIcon.innerHTML = '<i class="fa-solid fa-spinner fa-triangle-exclamation"></i> An error has occured.'
             playstopBtn.src = 'images/play.png';
         });
         playstopBtn.src = 'images/stop.png';
