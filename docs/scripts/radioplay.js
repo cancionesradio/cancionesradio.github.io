@@ -25,9 +25,9 @@ audio.addEventListener('ended', () => {
 });
 audio.addEventListener('error', () => {
     if(audio.error.code === 4) {
-        loadingIcon.innerHTML = '<i class="fa-solid fa-spinner fa-triangle-exclamation"></i> The station is offline. Come back later.'
+        loadingIcon.innerHTML = '<i class="fa-solid fa-spinner fa-triangle-exclamation"></i> The station is offline. Come back soon.'
     } else {
-        loadingIcon.innerHTML = '<i class="fa-solid fa-spinner fa-triangle-exclamation"></i> An error has occured.'
+        loadingIcon.innerHTML = '<i class="fa-solid fa-spinner fa-triangle-exclamation"></i> An error has occurred. Please try again.'
     }
 })
 
