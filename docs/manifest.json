@@ -1,0 +1,14 @@
+{
+    "name": "DZCP CancionesRadio 24/7",
+    "short_name": "CancionesRadio",
+    "icons": [{
+      "src": "./images/unnamed.jpg",
+      "sizes": "176x176",
+      "type": "image/jpg"
+    }],
+    "start_url": "./index.html",
+    "display": "standalone",
+    "theme_color": "#007bff",
+    "background_color": "#ffffff"
+}
+  
