@@ -29,7 +29,7 @@ audio.addEventListener('error', () => {
         loadingIcon.innerHTML = '<i class="fa-solid fa-spinner fa-triangle-exclamation"></i> The station is offline. Come back soon.'
     } else if (audio.error.code === 3){
         audio.pause();
-        loadingIcon.innerHTML = '<i class="fa-solid fa-spinner fa-triangle-exclamation"></i> A decoding error has occurred. Please try again.'
+        loadingIcon.innerHTML = '<i class="fa-solid fa-spinner fa-triangle-exclamation"></i> A decoding error has occurred. Refresh your browser.'
     } else if (audio.error.code === 2){
         audio.pause();
         loadingIcon.innerHTML = '<i class="fa-solid fa-spinner fa-triangle-exclamation"></i> A network error has occurred. Please try again.'
