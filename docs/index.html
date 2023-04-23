@@ -15,14 +15,22 @@
     </head>
     <body>
         <img class="main-logo" src="images/dzcp.png">
-        <h1>Musika, Kasaysayan, Inang Bayan</h1>
-        <div class="container_audio">
-            <div class="playstop"><a href="javascript:playstop()"><img id="playstop" src="images/play.png"></a></div>
-            <div class="volume-control"><input id="volume-control" type="range" max="100" value="100" oninput="setVolume()"></div>
+        <div class="wrapper">
+            <div class="audio-controls">
+                <div class="playstop">
+                    <i class="fa-solid fa-circle-play" onclick="playstop()"></i>
+                </div>
+                <div class="volume-speaker">
+                    <i class="fa-solid fa-volume-up"></i>
+                </div>
+                <div class="volume-control">
+                    <input id="volume-control" type="range" max="100" value="100" oninput="setVolume()">
+                </div>
+            </div>
         </div>
-        <div class="loading-icon"></div>
-        <div class="songinfo"><span class="cc_streaminfo" data-type="song" data-username="stephenl13"></span></div>
-        <p>All songs used are properties of its respective YouTube channels, composers, and record labels.</p>
+        <div class="songinfo"><p><span class="cc_streaminfo" data-type="song" data-username="stephenl13"></span></p></div>
+        <div class="status-text"></div>
+        <p class="disclaimer">All songs used are properties of its respective YouTube channels, composers, and record labels.</p>
         <p class="footer">©️ Canciones de Filipinas</p>
         <div class="social-media">
             <a href="https://youtube.com/@cancionesdefilipinas1898" target="_blank"><i class="fa-brands fa-youtube"></i></a>
