@@ -9,8 +9,8 @@ body {
 .container_audio {
     display: flex;
     flex-direction: row;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 15px;
+    margin-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -27,7 +27,7 @@ body {
 
 .loading-icon {
     display: block;
-    margin: auto;
+    margin: 20px auto 20px auto;
     font-size: 25px;
 }
 
@@ -50,7 +50,7 @@ body {
 .songinfo {
     margin-left: 60px;
     margin-right: 60px;
-    margin-top: 20px;
+    margin-top: 0px;
     text-align: center;
 }
 .volume-control { 
@@ -69,7 +69,7 @@ body {
         max-width: 750px;
         width: 70vw;
         display: flex;
-        margin-top: 100px;
+        margin-top: 50px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -90,7 +90,7 @@ body {
         max-width: 750px;
         width: 50vw;
         display: block;
-        margin-top: 100px;
+        margin-top: 50px;
         margin-left: auto;
         margin-right: auto;
     }

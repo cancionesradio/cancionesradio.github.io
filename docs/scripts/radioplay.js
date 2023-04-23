@@ -5,20 +5,28 @@ var loadingIcon = document.querySelector('.loading-icon');
 let slowInternetTimeout = null;
 audio.volume = 1
 
+window.addEventListener('load', () => {
+    document.getElementsByClassName("songinfo")[0].style.display = "none";
+});
+
 audio.addEventListener('waiting', () => {
 slowInternetTimeout = setTimeout(() => {
+    document.getElementsByClassName("songinfo")[0].style.display = "none";
     //show buffering
     loadingIcon.innerHTML = '<i class="fa-solid fa-spinner fa-spin-pulse"></i> Stream loading.';
     });
 });
+
 audio.addEventListener('playing', () => {
 if(slowInternetTimeout != null){
     clearTimeout(slowInternetTimeout);
     slowInternetTimeout = null;
     //continue playing
-    loadingIcon.innerHTML = '';
+    loadingIcon.innerHTML = "";
+    document.getElementsByClassName("songinfo")[0].style.display = "block";
     }
 });
+
 audio.addEventListener('ended', () => {
     loadingIcon.innerHTML = '<i class="fa-solid fa-spinner fa-triangle-exclamation"></i> DZCP is now signing off. Thank you for listening.'
     playstopBtn.src = 'images/play.png';
@@ -37,15 +45,17 @@ audio.addEventListener('error', () => {
 })
 
 function playstop() {
-    if(audio.paused) {
-        audio.load()
-        audio.play().catch(() => {
-            loadingIcon.innerHTML = '<i class="fa-solid fa-spinner fa-triangle-exclamation"></i> An error has occured.'
+    try {
+        if(audio.paused) {
+            audio.load()
+            audio.play();
+            playstopBtn.src = 'images/stop.png';
+        } else {
+            audio.pause();
             playstopBtn.src = 'images/play.png';
-        });
-        playstopBtn.src = 'images/stop.png';
-    } else {
-        audio.pause();
+        }
+    } catch (err) {
+        loadingIcon.innerHTML = '<i class="fa-solid fa-spinner fa-triangle-exclamation"></i> An error has occured.'
         playstopBtn.src = 'images/play.png';
     }
 }
