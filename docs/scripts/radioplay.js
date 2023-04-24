@@ -8,7 +8,6 @@ let slowInternetTimeout = null;
 audio.volume = 1
 
 window.addEventListener('load', () => {
-    songinfo.style.display = "none";
 });
 
 audio.addEventListener('waiting', () => {
@@ -23,7 +22,6 @@ if(slowInternetTimeout != null){
     slowInternetTimeout = null;
     //continue playing
     loadingIcon.innerHTML = "";
-    songinfo.style.display = "block";
     playstopBtn.innerHTML = '<i class="fa-solid fa-circle-pause fa-3x" onclick="playstop()"></i>';
     }
 });
