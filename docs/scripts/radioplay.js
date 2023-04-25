@@ -20,28 +20,29 @@ audio.addEventListener('playing', () => {
 if(slowInternetTimeout != null){
     clearTimeout(slowInternetTimeout);
     slowInternetTimeout = null;
-    //continue playing
-    loadingIcon.innerHTML = "";
     playstopBtn.innerHTML = '<i class="fa-solid fa-circle-pause fa-3x" onclick="playstop()"></i>';
     }
 });
 
 audio.addEventListener('ended', () => {
-    loadingIcon.innerHTML = '<i class="fa-solid fa-spinner fa-triangle-exclamation"></i> DZCP is now signing off. Thank you for listening.'
+    loadingIcon.innerHTML = '<i class="fa-solid fa-spinner fa-triangle-exclamation"></i> DZCP leaves off-air. Thank you for listening.'
     playstopBtn.innerHTML = '<i class="fa-solid fa-circle-play fa-3x" onclick="playstop()"></i>';
 });
 
 audio.addEventListener('error', () => {
     if(audio.error.code === 4) {
-        loadingIcon.innerHTML = '<i class="fa-solid fa-spinner fa-triangle-exclamation"></i> The station is offline. Come back soon.'
+        songinfo.innerHTML = '<i class="fa-solid fa-spinner fa-triangle-exclamation"></i> The station is currently offline. Be sure to refresh your browser once it returns on-air.'
         playstopBtn.innerHTML = '<i class="fa-solid fa-circle-play fa-3x" onclick="playstop()"></i>';
     } else if (audio.error.code === 3){
         audio.pause();
-        loadingIcon.innerHTML = '<i class="fa-solid fa-spinner fa-triangle-exclamation"></i> A decoding error has occurred. Refresh your browser.'
+        songinfo.innerHTML = '<i class="fa-solid fa-spinner fa-triangle-exclamation"></i> A decoding error has occurred. Refreshing your browser.'
         playstopBtn.innerHTML = '<i class="fa-solid fa-circle-play fa-3x" onclick="playstop()"></i>';
+        setTimeout(function(){
+           window.location.reload(1);
+        }, 5000);
     } else if (audio.error.code === 2){
         audio.pause();
-        loadingIcon.innerHTML = '<i class="fa-solid fa-spinner fa-triangle-exclamation"></i> A network error has occurred. Please try again.'
+        songinfo.innerHTML = '<i class="fa-solid fa-spinner fa-triangle-exclamation"></i> A network error has occurred. Please try again.'
         playstopBtn.innerHTML = '<i class="fa-solid fa-circle-play fa-3x" onclick="playstop()"></i>';
     }
 })
@@ -53,11 +54,10 @@ function playstop() {
             audio.play();
         } else {
             audio.pause();
-            loadingIcon.innerHTML = '';
             playstopBtn.innerHTML = '<i class="fa-solid fa-circle-play fa-3x" onclick="playstop()"></i>';
         }
     } catch (err) {
-        loadingIcon.innerHTML = '<i class="fa-solid fa-spinner fa-triangle-exclamation"></i> An error has occured.'
+        songinfo.innerHTML = '<i class="fa-solid fa-spinner fa-triangle-exclamation"></i> An error has occured.';
         playstopBtn.innerHTML = '<i class="fa-solid fa-circle-play fa-3x" onclick="playstop()"></i>';
     }
 }
