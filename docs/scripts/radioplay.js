@@ -1,4 +1,4 @@
-var audio = new Audio('https://eu8.fastcast4u.com/proxy/stephenl13?mp=/1');
+var audio = new Audio('https://eu8.fastcast4u.com/proxy/stephenl13/stream/');
 var playstopBtn = document.querySelector('.playstop');
 var volumeCtrl = document.querySelector('#volume-control');
 var volumeIcon = document.querySelector('.volume-speaker');
